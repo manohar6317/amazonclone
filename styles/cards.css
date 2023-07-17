@@ -1,0 +1,91 @@
+.card-container{
+    background-color: rgb(236, 227, 227);
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 394px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    line-height: 19px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  .card-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 27.3px;
+    color: rgb(15, 17, 17);
+    max-height: 54.6px;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .card-pic{
+    margin-top: 4px;
+    height: 102px;
+    width: 163px;
+  }
+  .card-pic-sub{
+    width: 100%;
+  }
+  .card-images-grid{
+    display: grid;
+    grid-template-columns: 163px 163px;
+    column-gap: 14px;
+    row-gap: 56px;
+  }
+  figcaption{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+    
+  }
+
+ .card-flex{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  @media (max-width: 2000px){
+    .card-flex {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 1600px){
+    .card-flex{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 1300px) {
+    .card-flex {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .card-flex {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+  @media (max-width: 575px) {
+    .card-flex {
+      grid-template-columns:  1fr;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .card-flex {
+      grid-template-columns: 1fr;
+    }
+  }
+  

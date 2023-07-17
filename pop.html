@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles/amazon-header.css">
+   
+    <style>
+        body{
+            margin: 0;
+            background-color: white;
+        }
+
+        .sign-in-body{
+            background-color: white;
+            height: 440px;
+            margin-top: 180px;
+            margin-right: 220px;
+            margin-left: 220px;
+            max-width: 420px;
+            min-width: 380px;
+        }
+        .sub-body{
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgb(183, 176, 176);
+            height: 340px;
+        }
+        .sign-in-container{
+            background-color: white;
+            height: 60px;
+            
+        }
+        h1{
+            padding-left: 24px;
+            font-family:  Arial, sans-serif;
+            font-size: 800;
+            color: rgba(0,0,0, 0.9);
+            text-align: center;
+            padding-right: 12px;
+           
+        }
+     .details{
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+     }
+     .sub-title{
+        font-size: larger;
+        font-weight: 600;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        text-align: center;
+     }
+     .bar{
+        max-width: 280px;
+        margin-left: 70px;
+        margin-bottom: 18px;
+        height: 28px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        color: rgb(24, 23, 23)
+     }
+     .button-primary {
+        color: rgb(33, 33, 33);
+        background-color: rgb(255, 216, 20);
+        border: 1px solid rgb(252, 210, 0);
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+        height: 32px;
+        max-width: 284px;
+        margin-left: 70px;
+        margin-bottom: 18px;
+        
+     }
+     .button-primary:hover {
+        background-color: rgb(247, 202, 0);
+        border: 1px solid rgb(242, 194, 0);
+        }
+
+        .button-primary:active {
+        background: rgb(255, 216, 20);
+        border-color: rgb(252, 210, 0);
+        box-shadow: none;
+        }
+       .footer{
+        text-align: center;
+        line-height: 22px;
+       }
+       .sub-footer{
+        text-align: center;
+       }
+       .new{
+        text-align: center;
+        text-decoration:solid;
+        margin-bottom: 14px;
+        padding-top: 2px;
+       }
+       .button-new{
+        border-style: solid;
+            border-width: 2px;
+            border-color: rgb(183, 176, 176);
+            background-color: white;
+            width: 420px;
+            max-width: 420px;
+            min-width: 300px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.18s;
+       }
+       .button-new:hover{
+        background-color: rgb(241, 245, 248);
+       }
+
+    </style>
+</head>
+<body>
+    <div class="amazon-header">
+        <div class="amazon-header-left-section">
+          <a class="header-link" title="Home">
+            <img class="amazon-logo" title="Home"
+              src="images/amazon-logo-white.png">
+            <img class="amazon-mobile-logo" title="Home"
+              src="images/amazon-mobile-logo-white.png">
+          </a>
+        </div>
+  
+        <div class="amazon-header-right-section">
+          <a class="cart-link header-link">
+            <img class="cart-icon" src="images/icons/cart-icon.png" title="Cart">
+            
+            <div class="cart-quantity">0</div>
+            <div class="cart-text">Cart</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sign-in-body">
+        <div class="sub-body"> 
+            <div class="sign-in-container">
+            <h1 class="sign-in-title">Sign In</h1>
+        </div>
+        <div class="details">
+            <p class="sub-title">Email or mobile phone number </p>
+                <input type="text" title="Enter Details" class="bar">
+            <button title="Move" type="button" class="button-primary">Continue</button>
+            <p class="footer">By continuing, you agree to Amazon's 
+                <a href="https://www.amazon.in/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=200545940">Conditions of Use</a> and
+                <a href="https://www.amazon.in/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=200534380">Privacy Notice.</a></p>
+                <a href="https://www.amazon.in/gp/help/customer/account-issues/ref=ap_login_with_otp_claim_collection?ie=UTF8" class="sub-footer">
+                    Need Help</a>
+        </div>
+    </div>
+    <div>
+        <p class="new">New to Amazon?</p>
+        <a href="https://www.amazon.in/ap/register?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=inflex&mobileBrowserWeblabTreatment=C&openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_ya_signin&prevRID=A3ZETHA8TFP2XRJQYFWK&openid.assoc_handle=inflex&openid.mode=checkid_setup&desktopBrowserWeblabTreatment=C&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0">
+            <button class="button-new" type="button">Create your Amazon account</button>
+        </a>
+        
+    </div>
+      </div>
+     
+</body>
+</html>

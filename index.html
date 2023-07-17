@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Amazon Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/amazon-header.css">
+    <link rel="stylesheet" href="styles/amazon.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/slides.css">
+    
+  </head>
+  <body>
+    <div class="amazon-header">
+      <div class="amazon-header-left-section">
+        <a href="index.html" class="header-link" title="Home">
+          <img class="amazon-logo" title="Home"
+            src="images/amazon-logo-white.png">
+          <img class="amazon-mobile-logo" title="Home"
+            src="images/amazon-mobile-logo-white.png">
+        </a>
+       <div class="geographic" onclick="getLocation()" id= "location">
+        <div class="gps">
+          <img src="images/icons/delivery.png" class="location-icon" title="Address">
+          </div>
+         <div class="left-sub-section">
+          <button class="gps-button">
+          <span class="hello">Hello</span>
+          <span class="Select">Select your address</span>
+         </button>
+      
+         </div>
+       </div>
+      </div>
+
+      <div class="amazon-header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search" id="search-item" onkeyup="search()">
+
+        <button type="button" class="search-button" title="Search">
+          <img class="search-icon" src="images/icons/search-icon.png" title="Search">
+        </button>
+      </div>
+
+      <div class="amazon-header-right-section">
+        
+          <button type="button" class="sign-in" onclick="signinpopup()">Sign In</button>
+        
+        <a class="orders-link header-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+      
+
+        <a class="cart-link header-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png" title="Cart">
+          
+          <div class="cart-quantity">2</div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>
+    </div>
+    <div class="background">
+
+      <div class="mySlides">
+        <img src="images/backgroundone.jpg" class="background-image" title="Prime-Day">
+      </div>
+      
+      <div class="mySlides">
+        <img src="images/backgroundtwo.jpg" class="background-image" title="Lowest-Price">
+      </div>
+      
+      <div class="mySlides">
+        <img src="images/backgroundthree.jpg" class="background-image" title="Luxury-Perfumes">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+  <div class="main">
+    <!-- New Product-->
+    <div class="products-grid" id="products-id">
+                <div class="product-container">
+                  <div class="product-image-container">
+                    <img class="product-image" title="Sun-Glasses"
+                      src="images/products/round-sunglasses-black.jpg">
+                  </div>
+              
+                    <h2 class="product-x">Sun-Glasses Black</h2>
+            
+                  <div class="product-rating-container">
+                    <img class="product-rating-stars" title="rating"
+                      src="images/ratings/rating-45.png">
+                    <div class="product-rating-count link-primary">
+                      87
+                    </div>
+                  </div>
+
+                  <div class="product-price">
+                    ₹249
+                  </div>
+
+                  <div class="product-quantity-container">
+                    <select title="Choose">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+
+                  <div class="product-spacer"></div>
+
+                  <div class="added-to-cart" id="add">
+                    <img src="images/icons/checkmark.png" title="rating">
+                    Added
+                  </div>
+
+                  <button class="add-to-cart-button button-primary" onclick="added()">
+                    Add to Cart
+                  </button>
+                </div>
+<!-- 2nd Product-->
+      <div class="product-container">
+        <div class="product-image-container">
+          <img class="product-image"
+            src="images/products/trash-can-with-foot-pedal-50-liter.jpg">
+        </div>
+
+       <h2>Trash Can Steel</h2>
+          
+        
+
+        <div class="product-rating-container">
+          <img class="product-rating-stars"
+            src="images/ratings/rating-45.png">
+          <div class="product-rating-count link-primary">
+            127
+          </div>
+        </div>
+
+        <div class="product-price">
+          ₹2095
+        </div>
+
+        <div class="product-quantity-container">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-cart" id="add">
+          <img src="images/icons/checkmark.png">
+          Added
+        </div>
+
+        <button class="add-to-cart-button button-primary" onclick="added()">
+          Add to Cart
+        </button>
+      </div>
+     <!-- 3rd ONe-->
+      <div class="product-container">
+        <div class="product-image-container">
+          <img class="product-image"
+            src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
+        </div>
+
+        <h2>T Shirt - 2</h2>
+
+        <div class="product-rating-container">
+          <img class="product-rating-stars"
+            src="images/ratings/rating-40.png">
+          <div class="product-rating-count link-primary">
+            59
+          </div>
+        </div>
+
+        <div class="product-price">
+          ₹790
+        </div>
+
+        <div class="product-quantity-container">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-cart">
+          <img src="images/icons/checkmark.png">
+          Added
+        </div>
+
+        <button class="add-to-cart-button button-primary" onclick="added()">
+          Add to Cart
+        </button>
+      </div>
+      <!-- 2nd Product-->
+      <div class="product-container">
+        <div class="product-image-container">
+          <img class="product-image"
+            src="images/products/backpack.jpg">
+        </div>
+
+       
+         <h2>Back Pack</h2>
+        
+
+        <div class="product-rating-container">
+          <img class="product-rating-stars"
+            src="images/ratings/rating-45.png">
+          <div class="product-rating-count link-primary">
+            620
+          </div>
+        </div>
+
+        <div class="product-price">
+          ₹4499
+        </div>
+
+        <div class="product-quantity-container">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-cart">
+          <img src="images/icons/checkmark.png">
+          Added
+        </div>
+
+        <button class="add-to-cart-button button-primary" onclick="added()">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 2nd Product-->
+      <div class="product-container">
+        <div class="product-image-container">
+          <img class="product-image"
+            src="images/products/women-beach-sandals.jpg">
+        </div>
+
+        
+         
+       <h2>Women Beach Sandals pair</h2>
+
+        <div class="product-rating-container">
+          <img class="product-rating-stars"
+            src="images/ratings/rating-40.png">
+          <div class="product-rating-count link-primary">
+            148
+          </div>
+        </div>
+
+        <div class="product-price">
+          ₹1459
+        </div>
+
+        <div class="product-quantity-container">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-cart">
+          <img src="images/icons/checkmark.png">
+          Added
+        </div>
+
+        <button class="add-to-cart-button button-primary" onclick="added()">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 2nd Product-->
+      <div class="product-container">
+        <div class="product-image-container">
+          <img class="product-image"
+            src="images/products/vanity-mirror-silver.jpg">
+        </div>
+
+        
+          <h2>Vanity Mirror [Silver Edition]</h2>
+        
+
+        <div class="product-rating-container">
+          <img class="product-rating-stars"
+            src="images/ratings/rating-40.png">
+          <div class="product-rating-count link-primary">
+            1270
+          </div>
+        </div>
+
+        <div class="product-price">
+          ₹1659
+        </div>
+
+        <div class="product-quantity-container">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-cart">
+          <img src="images/icons/checkmark.png">
+          Added
+        </div>
+
+        <button class="add-to-cart-button button-primary" onclick="added()">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 2nd Product-->
+      <div class="product-container">
+        <div class="product-image-container">
+          <img class="product-image"
+            src="images/products/women-stretch-popover-hoodie-black.jpg">
+        </div>
+
+      
+          <h2>Women Hoodie Black</h2>
+        
+
+        <div class="product-rating-container">
+          <img class="product-rating-stars"
+            src="images/ratings/rating-20.png">
+          <div class="product-rating-count link-primary">
+            7
+          </div>
+        </div>
+
+        <div class="product-price">
+          $299
+        </div>
+
+        <div class="product-quantity-container">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-cart">
+          <img src="images/icons/checkmark.png">
+          Added
+        </div>
+
+        <button class="add-to-cart-button button-primary" onclick="added()">
+          Add to Cart
+        </button>
+      </div>
+<!-- 2nd Product-->
+<div class="product-container">
+<div class="product-image-container">
+  <img class="product-image"
+    src="images/products/umbrella.jpg">
+</div>
+
+<h2>Regular Umbrella</h2>
+
+<div class="product-rating-container">
+  <img class="product-rating-stars"
+    src="images/ratings/rating-30.png">
+  <div class="product-rating-count link-primary">
+    168
+  </div>
+</div>
+
+<div class="product-price">
+  ₹260
+</div>
+
+<div class="product-quantity-container">
+  <select>
+    <option selected value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</div>
+
+<div class="product-spacer"></div>
+
+<div class="added-to-cart" id="add">
+  <img src="images/icons/checkmark.png">
+  Added
+</div>
+
+<button class="add-to-cart-button button-primary" onclick="added()">
+  Add to Cart
+</button>
+</div>
+
+<!-- 2nd Product-->
+<div class="product-container">
+<div class="product-image-container">
+<img class="product-image"
+  src="images/products/double-elongated-twist-french-wire-earrings.webp">
+</div>
+
+<h2>Elongated French Earrings</h2>
+
+<div class="product-rating-container">
+<img class="product-rating-stars"
+  src="images/ratings/rating-40.png">
+<div class="product-rating-count link-primary">
+  168
+</div>
+</div>
+
+<div class="product-price">
+  ₹189
+</div>
+
+<div class="product-quantity-container">
+<select>
+  <option selected value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</div>
+
+<div class="product-spacer"></div>
+
+<div class="added-to-cart">
+<img src="images/icons/checkmark.png">
+Added
+</div>
+
+<button class="add-to-cart-button button-primary">
+Add to Cart
+</button>
+</div>
+
+<div class="product-container">
+  <div class="product-image-container">
+  <img class="product-image"
+    src="images/products/men-slim-fit-summer-shorts-gray.jpg">
+  </div>
+  
+  <h2>Summer Shorts</h2>
+  
+  <div class="product-rating-container">
+  <img class="product-rating-stars"
+    src="images/ratings/rating-45.png">
+  <div class="product-rating-count link-primary">
+    72
+  </div>
+  </div>
+  
+  <div class="product-price">
+    ₹489
+  </div>
+  
+  <div class="product-quantity-container">
+  <select>
+    <option selected value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+  </div>
+  
+  <div class="product-spacer"></div>
+  
+  <div class="added-to-cart" >
+  <img src="images/icons/checkmark.png">
+  Added
+  </div>
+  
+  <button class="add-to-cart-button button-primary">
+  Add to Cart
+  </button>
+  </div>
+
+
+  <div class="product-container">
+    <div class="product-image-container">
+    <img class="product-image"
+      src="images/products/bathroom-rug.jpg">
+    </div>
+    
+    <h2>Bathroom Rug</h2>
+    
+    <div class="product-rating-container">
+    <img class="product-rating-stars"
+      src="images/ratings/rating-35.png">
+    <div class="product-rating-count link-primary">
+      26
+    </div>
+    </div>
+    
+    <div class="product-price">
+      ₹1399
+    </div>
+    
+    <div class="product-quantity-container">
+    <select>
+      <option selected value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    </div>
+    
+    <div class="product-spacer"></div>
+    
+    <div class="added-to-cart">
+    <img src="images/icons/checkmark.png">
+    Added
+    </div>
+    
+    <button class="add-to-cart-button button-primary">
+    Add to Cart
+    </button>
+    </div>
+
+    <div class="product-container">
+      <div class="product-image-container">
+      <img class="product-image"
+        src="images/products/countertop-blender-64-oz.jpg">
+      </div>
+      
+      <h2>Blender Blaze Set</h2>
+
+      <div class="product-rating-container">
+      <img class="product-rating-stars"
+        src="images/ratings/rating-45.png">
+      <div class="product-rating-count link-primary">
+        1689
+      </div>
+      </div>
+      
+      <div class="product-price">
+        ₹1789
+      </div>
+      
+      <div class="product-quantity-container">
+      <select>
+        <option selected value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      </div>
+      
+      <div class="product-spacer"></div>
+      
+      <div class="added-to-cart">
+      <img src="images/icons/checkmark.png">
+      Added
+      </div>
+      
+      <button class="add-to-cart-button button-primary">
+      Add to Cart
+      </button>
+      </div>
+<!-- 2nd Product-->
+<div class="product-container">
+<div class="product-image-container">
+<img class="product-image"
+  src="images/products/facial-tissue-2-ply-18-boxes.jpg">
+</div>
+
+<h2>Facial Tissues</h2>
+
+<div class="product-rating-container">
+<img class="product-rating-stars"
+  src="images/ratings/rating-40.png">
+<div class="product-rating-count link-primary">
+  89
+</div>
+</div>
+
+<div class="product-price">
+  ₹249
+</div>
+
+<div class="product-quantity-container">
+<select>
+  <option selected value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</div>
+
+<div class="product-spacer"></div>
+
+<div class="added-to-cart">
+<img src="images/icons/checkmark.png">
+Added
+</div>
+
+<button class="add-to-cart-button button-primary">
+Add to Cart
+</button>
+</div>
+
+
+<div class="product-container">
+  <div class="product-image-container">
+  <img class="product-image"
+    src="images/products/cotton-bath-towels-teal.webp">
+  </div>
+  
+  <h2>Cotton Towels Pair</h2>
+
+  <div class="product-rating-container">
+  <img class="product-rating-stars"
+    src="images/ratings/rating-45.png">
+  <div class="product-rating-count link-primary">
+    921
+  </div>
+  </div>
+  
+  <div class="product-price">
+    ₹789
+  </div>
+  
+  <div class="product-quantity-container">
+  <select>
+    <option selected value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+  </div>
+  
+  <div class="product-spacer"></div>
+  
+  <div class="added-to-cart">
+  <img src="images/icons/checkmark.png">
+  Added
+  </div>
+  
+  <button class="add-to-cart-button button-primary">
+  Add to Cart
+  </button>
+  </div>
+
+  
+  <div class="product-container">
+    <div class="product-image-container">
+    <img class="product-image"
+      src="images/products/intermediate-composite-basketball.jpg">
+    </div>
+    
+    <h2>BasketBall</h2>
+
+    <div class="product-rating-container">
+    <img class="product-rating-stars"
+      src="images/ratings/rating-45.png">
+    <div class="product-rating-count link-primary">
+      429
+    </div>
+    </div>
+    
+    <div class="product-price">
+      ₹759
+    </div>
+    
+    <div class="product-quantity-container">
+    <select>
+      <option selected value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    </div>
+    
+    <div class="product-spacer"></div>
+    
+    <div class="added-to-cart">
+    <img src="images/icons/checkmark.png">
+    Added
+    </div>
+    
+    <button class="add-to-cart-button button-primary">
+    Add to Cart
+    </button>
+    </div>
+
+    
+    <div class="product-container">
+      <div class="product-image-container">
+      <img class="product-image"
+        src="images/products/knit-athletic-sneakers-pink.webp">
+      </div>
+      
+      <h2>Sneakers</h2>
+
+      <div class="product-rating-container">
+      <img class="product-rating-stars"
+        src="images/ratings/rating-35.png">
+      <div class="product-rating-count link-primary">
+        224
+      </div>
+      </div>
+      
+      <div class="product-price">
+        ₹1499
+      </div>
+      
+      <div class="product-quantity-container">
+      <select>
+        <option selected value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      </div>
+      
+      <div class="product-spacer"></div>
+      
+      <div class="added-to-cart">
+      <img src="images/icons/checkmark.png">
+      Added
+      </div>
+      
+      <button class="add-to-cart-button button-primary">
+      Add to Cart
+      </button>
+      </div>
+
+      
+    <div class="product-container">
+      <div class="product-image-container">
+      <img class="product-image"
+        src="images/products/blackout-curtain-set-beige.webp">
+      </div>
+      
+      <h2>Curtain Set</h2>
+
+      <div class="product-rating-container">
+      <img class="product-rating-stars"
+        src="images/ratings/rating-25.png">
+      <div class="product-rating-count link-primary">
+        86
+      </div>
+      </div>
+      
+      <div class="product-price">
+        ₹1869
+      </div>
+      
+      <div class="product-quantity-container">
+      <select>
+        <option selected value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      </div>
+      
+      <div class="product-spacer"></div>
+      
+      <div class="added-to-cart">
+      <img src="images/icons/checkmark.png">
+      Added
+      </div>
+      
+      <button class="add-to-cart-button button-primary">
+      Add to Cart
+      </button>
+      </div>
+
+      
+    <div class="product-container">
+      <div class="product-image-container">
+      <img class="product-image"
+        src="images/products/coffeemaker-with-glass-carafe-black.jpg">
+      </div>
+      
+      <h2>Coffee Maker</h2>
+
+      <div class="product-rating-container">
+      <img class="product-rating-stars"
+        src="images/ratings/rating-45.png">
+      <div class="product-rating-count link-primary">
+        2649
+      </div>
+      </div>
+      
+      <div class="product-price">
+        ₹3499
+      </div>
+      
+      <div class="product-quantity-container">
+      <select>
+        <option selected value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      </div>
+      
+      <div class="product-spacer"></div>
+      
+      <div class="added-to-cart">
+      <img src="images/icons/checkmark.png">
+      Added
+      </div>
+      
+      <button class="add-to-cart-button button-primary">
+      Add to Cart
+      </button>
+      </div>
+
+
+      <div class="product-container">
+        <div class="product-image-container">
+        <img class="product-image"
+          src="images/products/boatwatch.jpg">
+        </div>
+        
+        <h2 class="product-x">boAt Wave Call Smart Watch, Smart Talk with Advanced Dedicated Bluetooth Calling Chip</h2>
+  
+        <div class="product-rating-container">
+        <img class="product-rating-stars"
+          src="images/ratings/rating-45.png">
+        <div class="product-rating-count link-primary">
+          3456
+        </div>
+        </div>
+        
+        <div class="product-price">
+          ₹2299
+        </div>
+        
+        <div class="product-quantity-container">
+        <select>
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        </div>
+        
+        <div class="product-spacer"></div>
+        
+        <div class="added-to-cart">
+        <img src="images/icons/checkmark.png">
+        Added
+        </div>
+        
+        <button class="add-to-cart-button button-primary">
+        Add to Cart
+        </button>
+        </div>
+
+
+        <div class="product-container">
+          <div class="product-image-container">
+          <img class="product-image"
+            src="images/products/sandisk.jpg">
+          </div>
+          
+          <h2 class="product-x">SankDisk Pendrive</h2>
+    
+          <div class="product-rating-container">
+          <img class="product-rating-stars"
+            src="images/ratings/rating-35.png">
+          <div class="product-rating-count link-primary">
+            382
+          </div>
+          </div>
+          
+          <div class="product-price">
+            ₹549
+          </div>
+          
+          <div class="product-quantity-container">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          </div>
+          
+          <div class="product-spacer"></div>
+          
+          <div class="added-to-cart">
+          <img src="images/icons/checkmark.png">
+          Added
+          </div>
+          
+          <button class="add-to-cart-button button-primary">
+          Add to Cart
+          </button>
+          </div>
+
+
+          <div class="product-container">
+            <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/vivo.jpg">
+            </div>
+            
+            <h2 class="product-x">Vivo Y100</h2>
+      
+            <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-40.png">
+            <div class="product-rating-count link-primary">
+              6947
+            </div>
+            </div>
+            
+            <div class="product-price">
+              ₹22499
+            </div>
+            
+            <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            </div>
+            
+            <div class="product-spacer"></div>
+            
+            <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+            </div>
+            
+            <button class="add-to-cart-button button-primary">
+            Add to Cart
+            </button>
+            </div>
+
+
+            <div class="product-container">
+              <div class="product-image-container">
+              <img class="product-image"
+                src="images/products/amazonbasics.webp">
+              </div>
+              
+              <h2 class="product-x">Amazon Basics UV 52mm</h2>
+        
+              <div class="product-rating-container">
+              <img class="product-rating-stars"
+                src="images/ratings/rating-45.png">
+              <div class="product-rating-count link-primary">
+                126
+              </div>
+              </div>
+              
+              <div class="product-price">
+                ₹149
+              </div>
+              
+              <div class="product-quantity-container">
+              <select>
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              </div>
+              
+              <div class="product-spacer"></div>
+              
+              <div class="added-to-cart">
+              <img src="images/icons/checkmark.png">
+              Added
+              </div>
+              
+              <button class="add-to-cart-button button-primary">
+              Add to Cart
+              </button>
+              </div>
+
+
+              <div class="product-container">
+                <div class="product-image-container">
+                <img class="product-image"
+                  src="images/products/speakers.jpg">
+                </div>
+                
+                <h2 class="product-x">Tronica Speakers</h2>
+          
+                <div class="product-rating-container">
+                <img class="product-rating-stars"
+                  src="images/ratings/rating-45.png">
+                <div class="product-rating-count link-primary">
+                  226
+                </div>
+                </div>
+                
+                <div class="product-price">
+                  ₹3299
+                </div>
+                
+                <div class="product-quantity-container">
+                <select>
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                </div>
+                
+                <div class="product-spacer"></div>
+                
+                <div class="added-to-cart">
+                <img src="images/icons/checkmark.png">
+                Added
+                </div>
+                
+                <button class="add-to-cart-button button-primary">
+                Add to Cart
+                </button>
+                </div>
+
+
+                <div class="product-container">
+                  <div class="product-image-container">
+                  <img class="product-image"
+                    src="images/products/smartlights.jpg">
+                  </div>
+                  
+                  <h2 class="product-x">Smart Lights</h2>
+            
+                  <div class="product-rating-container">
+                  <img class="product-rating-stars"
+                    src="images/ratings/rating-40.png">
+                  <div class="product-rating-count link-primary">
+                    264
+                  </div>
+                  </div>
+                  
+                  <div class="product-price">
+                    ₹699
+                  </div>
+                  
+                  <div class="product-quantity-container">
+                  <select>
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                  </div>
+                  
+                  <div class="product-spacer"></div>
+                  
+                  <div class="added-to-cart">
+                  <img src="images/icons/checkmark.png">
+                  Added
+                  </div>
+                  
+                  <button class="add-to-cart-button button-primary">
+                  Add to Cart
+                  </button>
+                  </div>
+
+
+</div>
+    
+<div class="card-flex">
+  <div class="card-container">
+    <p class="card-title">Starting @999 | Books,
+      Watches, Mouses
+    </p>
+    <div class="card-images-grid">
+      <div>
+        <img src="images/card/books.jpg" class="card-pic" title="Books">
+        <figcaption>Subconsious</figcaption>
+      </div>
+      <div>
+        <img src="images/card/fridges.jpg" class="card-pic" title="Fridges">
+        <figcaption>Fridges</figcaption>
+      </div>
+      <div>
+        <img src="images/card/mouse.jpg" class="card-pic" title="Mouses">
+        <figcaption>Gaming Mouses</figcaption>
+      </div>
+      <div>
+        <img src="images/card/watches.jpg" class="card-pic" title="Watches">
+        <figcaption>Apple Watches</figcaption>
+      </div>
+    </div>
+  </div>
+<!--Second -->
+
+<div class="card-container">
+  <p class="card-title">Starting ₹299 | Shoes & handbags
+  </p>
+  <div class="card-images-grid">
+    <div>
+      <img src="images/card/shoes.jpg" class="card-pic" title="Books">
+      <figcaption>Sports Shoes</figcaption>
+    </div>
+    <div>
+      <img src="images/card/menshoes.jpg" class="card-pic" title="Fridges">
+      <figcaption>Men's Shoes</figcaption>
+    </div>
+    <div>
+      <img src="images/card/womenshoes.jpg" class="card-pic" title="Mouses">
+      <figcaption>Women's Shoes</figcaption>
+    </div>
+    <div>
+      <img src="images/card/handbags.jpg" class="card-pic" title="Watches">
+      <figcaption>Handbags</figcaption>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-container">
+  <p class="card-title">Up to 65% off | Home appliances
+  </p>
+  <div class="card-images-grid">
+    <div>
+      <img src="images/card/washingmachine.jpg" class="card-pic" title="Books">
+      <figcaption>Washing Machines</figcaption>
+    </div>
+    <div>
+      <img src="images/card/refridgerators.jpg" class="card-pic" title="Fridges">
+      <figcaption>Refridgerators</figcaption>
+    </div>
+    <div>
+      <img src="images/card/airconditioner.jpg" class="card-pic" title="Mouses">
+      <figcaption>Air Conditioners</figcaption>
+    </div>
+    <div>
+      <img src="images/card/microwaves.jpg" class="card-pic" title="Watches">
+      <figcaption>Microwaves</figcaption>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-container">
+  <p class="card-title">Up to 70% off | Home, kitchen
+  </p>
+  <div class="card-images-grid">
+    <div>
+      <img src="images/card/cookware.jpg" class="card-pic" title="Books">
+      <figcaption>Cookware</figcaption>
+    </div>
+    <div>
+      <img src="images/card/pillow.jpg" class="card-pic" title="Fridges">
+      <figcaption>Pillows set</figcaption>
+    </div>
+    <div>
+      <img src="images/card/table.jpg" class="card-pic" title="Mouses">
+      <figcaption>Table Furniture</figcaption>
+    </div>
+    <div>
+      <img src="images/card/tools.jpg" class="card-pic" title="Watches">
+      <figcaption>Tools & Home Improvement</figcaption>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="card-container">
+  <p class="card-title">Up to 35% off on medicines 
+  </p>
+ 
+    <div>
+      <img src="images/card/medicines.jpg" class="card-pic-sub" title="Books">
+      <figcaption style="margin-top: 6px">Medicines</figcaption>
+    </div>
+
+</div>
+
+<div class="card-container">
+  <p class="card-title">Up to 75% off | Electronics & accessories</p>
+ 
+    <div>
+      <img src="images/card/delllaptop.jpg" class="card-pic-sub" title="Books">
+      <figcaption style="margin-top: 6px">Laptops</figcaption>
+    </div>
+
+</div>
+
+<div class="card-container">
+  <p class="card-title">Up to 35% off on medicines 
+  </p>
+  <div class="card-images-grid">
+    <div>
+      <img src="images/card/maybelline.jpg" class="card-pic" title="Books">
+      <figcaption>Maybelline</figcaption>
+    </div>
+    <div>
+      <img src="images/card/sugarcosmotics.jpg" class="card-pic" title="Books">
+      <figcaption>Sugar Cosmotics</figcaption>
+    </div>
+    <div>
+      <img src="images/card/renee.jpg" class="card-pic" title="Books">
+      <figcaption>Renee</figcaption>
+    </div>
+    <div>
+      <img src="images/card/swissbeauty.jpg" class="card-pic" title="Books">
+      <figcaption>Swiss Beauty</figcaption>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+     <script src="script.js"></script>
+   
+    
+  </body>
+</html>
