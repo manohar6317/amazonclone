@@ -138,6 +138,13 @@
   justify-content: end;
   align-items: center;
 }
+@media (max-width: 426px) {
+  .amazon-header-right-section  {
+    justify-content: left;
+    margin-right: 45px;
+
+  }
+}
 
 .orders-link {
   color: white;
